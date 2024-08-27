@@ -1,0 +1,14 @@
+{% extends 'meow/base.html' %}
+
+{% block title %}Welcome to Meow App{% endblock %}
+
+{% block content %}
+<h2>Welcome to Meow App</h2>
+<p>This is the main landing page of the application. Use the navigation links below to manage different functions.</p>
+<ul>
+    <li><a href="{% url 'user_list' %}">Manage Users</a></li>
+    <li><a href="{% url 'create_user' %}">Create a New User</a></li>
+    <li><a href="{% url 'admin:index' %}">Admin Dashboard</a></li>
+    <!-- Add more navigation links as needed -->
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'meow/base.html' %}
+
+{% block title %}User Detail{% endblock %}
+
+{% block content %}
+<h2>User Detail</h2>
+<p>UserId: {{ user.UserId }}</p>
+<!-- Add other user attributes here -->
+<a href="{% url 'user_list' %}">Back to User List</a>
+{% endblock %}
