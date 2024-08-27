@@ -1,0 +1,28 @@
+<!-- templates/playbook_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Playbook Detail{% endblock %}
+
+{% block content %}
+<h2>{{ playbook.play_name }}</h2>
+<p><strong>Version:</strong> {{ playbook.version }}</p>
+<p><strong>Author:</strong> {{ playbook.author }}</p>
+<h3>Roles</h3>
+<ul>
+    {% for role in playbook.roles %}
+    <li>{{ role }}</li>
+    {% endfor %}
+</ul>
+<h3>Blocks</h3>
+<ul>
+    {% for block in playbook.blocks %}
+    <li>{{ block }}</li>
+    {% endfor %}
+</ul>
+<h3>Tasks</h3>
+<ul>
+    {% for task in playbook.tasks %}
+    <li>{{ task }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
